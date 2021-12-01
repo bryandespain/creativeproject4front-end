@@ -1,32 +1,81 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+    <div class="header">
+      <router-link to="/">
+        <div class="logo">
+          <img src="/images/allstarlogo.png" />
+        </div>
+      </router-link>
+      <div class="title">
+        <h1>2021 NBA Allstars</h1>
+      </div>
     </div>
-    <router-view />
+    <div class="content">
+      <router-view />
+    </div>
+    <div class="footer">
+      <h4>
+        <router-link to="/admin">Admin</router-link> |
+        <router-link to="/stats">Stats</router-link>
+      </h4>
+    </div>
   </div>
 </template>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+html {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  background: #fff;
+  padding: 0px;
+  margin: 0px;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: center;
+  padding: 10px 100px 0px 100px;
+  background-color: white;
+  color: #1c454f;
+}
+
+.title {
+  margin-top: 5px;
+}
+
+.title h1 {
+  justify-content: center;
+  font-size: 30px;
   text-align: center;
-  color: #2c3e50;
 }
 
-#nav {
-  padding: 30px;
+.content {
+  padding: 20px 100px;
+  min-height: 500px;
 }
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
+/* Footer */
+.footer {
+  height: 50px;
+  text-align: center;
+  padding: 20px 100px 0px 100px;
+  font-size: 12px;
 }
 
-#nav a.router-link-exact-active {
-  color: #42b983;
+.footer a {
+  color: #000;
+}
+
+h1 {
+  font-size: 20px;
+}
+
+h2 {
+  font-size: 14px;
 }
 </style>
